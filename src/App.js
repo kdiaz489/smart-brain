@@ -91,7 +91,7 @@ onInputChange = (event) =>{
 
 onButtonSubmit = () =>{
   this.setState({imageUrl: this.state.input});
-    fetch('https://git.heroku.com/serene-wave-22805.git:3000/imageurl',{
+    fetch('https://serene-wave-22805.herokuapp.com',{
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -101,7 +101,7 @@ onButtonSubmit = () =>{
     .then(response => response.json())
     .then(response => {
       if(response){
-        fetch('https://git.heroku.com/serene-wave-22805.git:3000/image',{
+        fetch('https://serene-wave-22805.herokuapp.com:3000/image',{
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
