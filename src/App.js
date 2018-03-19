@@ -91,7 +91,7 @@ onInputChange = (event) =>{
 
 onButtonSubmit = () =>{
   this.setState({imageUrl: this.state.input});
-    fetch('https://serene-wave-22805.herokuapp.com',{
+    fetch('https://serene-wave-22805.herokuapp.com/imageurl',{
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
